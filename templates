@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Fertilizer Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 AI Based Fertilizer Recommendation System</h1>
+
+    <form method="POST">
+        <input type="number" name="nitrogen" placeholder="Nitrogen (N)" required>
+        <input type="number" name="phosphorus" placeholder="Phosphorus (P)" required>
+        <input type="number" name="potassium" placeholder="Potassium (K)" required>
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    {% if result %}
+        <h2>Recommended Fertilizer:</h2>
+        <h3>{{ result }}</h3>
+    {% endif %}
+</div>
+
+</body>
+</html>
